@@ -1,9 +1,9 @@
+import { TopBar } from '../../components/TopBar';
+
 import { HomeContainer } from './styles';
 
 export function Home() {
   return (
-    <HomeContainer>
-      
-    </HomeContainer>
+    <TopBar />
   )
 }
