@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TopBarContainer = styled.div`
+export const TopBarContainer = styled.header`
   width: 100%;
   height: 3.125rem;
   background-color: #1877f2;
