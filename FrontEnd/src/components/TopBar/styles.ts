@@ -10,6 +10,7 @@ export const TopBarContainer = styled.header`
 
   position: sticky;
   top: 0;
+  z-index: 2;
 `;
 
 export const TopBarLeft = styled.div`
