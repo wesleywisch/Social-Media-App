@@ -10,7 +10,9 @@ import {
   School
 } from '@material-ui/icons';
 
-import person from '../../assets/person/2.jpeg';
+import { Users } from '../../data/database';
+
+import { CloseFriend } from '../CloseFriend';
 
 import { SideBarContainer } from './styles';
 
@@ -78,12 +80,14 @@ export function SideBar() {
         <hr className='sidebarHr' />
 
         <ul className="sidebarFriendList">
-          <li className="sidebarFriend">
-            <img src={person} alt="Jane doe" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">
-              Jane doe
-            </span>
-          </li>
+          {Users.map((user, key) => (
+            <CloseFriend 
+              key={key}
+              id={user.id}
+              profilePicture={user.profilePicture}
+              username={user.username}
+            />
+          ))}
         </ul>
       </div>
     </SideBarContainer>

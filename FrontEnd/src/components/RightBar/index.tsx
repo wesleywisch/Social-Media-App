@@ -1,8 +1,10 @@
 import birthday from '../../assets/gift.png';
 import ad from '../../assets/ad.png';
-import person from '../../assets/person/3.jpeg';
+
+import { Users } from '../../data/database';
 
 import { RightBarContainer } from './styles';
+import { PeopleOnline } from '../PeopleOnline';
 
 export function RightBar() {
   return (
@@ -20,15 +22,14 @@ export function RightBar() {
         <h4 className="rightBarTitle">Online Friends</h4>
 
         <ul className="rightBarFriendList">
-          <li className="rightBarFriend">
-            <div className="rightBarProfileImgContainer">
-              <img src={person} alt="Pessoa" className="rightBarProfileImg" />
-
-              <span className="rightBarOnline"></span>
-            </div>
-
-            <span className="rightBarUsername">John Carter</span>
-          </li>
+          {Users.map((user, key) => (
+            <PeopleOnline
+              key={key}
+              id={user.id}
+              profilePicture={user.profilePicture}
+              username={user.username}
+            />
+          ))}
         </ul>
       </div>
     </RightBarContainer>

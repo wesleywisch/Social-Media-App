@@ -4,6 +4,8 @@ export const SideBarContainer = styled.div`
   flex: 3;
   height: calc(100vh - 3.125rem);
   overflow-y: scroll;
+  position: sticky;
+  top: 3.125rem;
 
   ::-webkit-scrollbar {
     width: 5px;
@@ -44,22 +46,6 @@ export const SideBarContainer = styled.div`
       margin: 1.25rem 0;
     }
 
-    .sidebarFriendList {
-      .sidebarFriend {
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.93rem; 
-
-        .sidebarFriendImg {
-          width: 2rem;
-          height: 2rem;
-          border-radius: 50%;
-          object-fit: cover;
-          margin-right: 0.625rem;
-        }
-
-        .sidebarFriendName {}
-      }
-    }
+    .sidebarFriendList {}
   }
 `;
