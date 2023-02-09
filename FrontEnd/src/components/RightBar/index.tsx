@@ -7,7 +7,7 @@ import { Users } from '../../data/database';
 import { RightBarContainer } from './styles';
 import { PeopleOnline } from '../PeopleOnline';
 
-export function RightBar() {
+export function RightBar({ profile }: { profile?: any }) {
 
   function HomeRightBar() {
     return (
@@ -79,7 +79,9 @@ export function RightBar() {
   return (
     <RightBarContainer>
       <div className="rightBarWrapper">
-        <ProfileRightBar />
+        {
+          profile ? <ProfileRightBar /> : <HomeRightBar />
+        }
       </div>
     </RightBarContainer>
   )
